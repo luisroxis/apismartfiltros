@@ -1,0 +1,11 @@
+#node_modules
+node_modules
+
+#temp directory
+tmp
+
+#images files
+*.png
+*.jpg
+*.jpeg
+
