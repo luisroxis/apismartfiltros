@@ -17,5 +17,7 @@ routes.post('/clients', ClientController.store)
 
 routes.use(authMiddleware)
 routes.put('/users', UserController.update)
+routes.get('/clients', ClientController.index)
+routes.put('/clients', ClientController.update)
 
 export default routes
