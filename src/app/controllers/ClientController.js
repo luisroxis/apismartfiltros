@@ -31,7 +31,7 @@ class ClientController {
     const consumo_com_filtro = (C7 / C10) * C3 * C2
     const economia_em_litros = consumo_atual - custo_filtro
 
-    await Client.create({
+    const client = await Client.create({
       nome,
       email,
       cpf,
@@ -50,6 +50,8 @@ class ClientController {
       consumo_com_filtro,
       economia_em_litros
     })
+
+    return res.json(client)
   }
 
   async update (req, res) {
