@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -21,62 +21,66 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      qtde_equipametos: {
-        type: Sequelize.INTEGER,
+      qtde_equipamento: {
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
-      capacidade: {
+      capacidade_oleo: {
         type: Sequelize.NUMBER,
         allowNull: false,
       },
       custo_litro: {
-        type: Sequelize.STRING,
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
       custo_filtro: {
-        type: Sequelize.STRING,
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
-      intervalo_troca: {
-        type: Sequelize.STRING,
+      intervalo_de_trocas: {
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
       utilizacao_anual: {
-        type: Sequelize.STRING,
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
       custo_operacional: {
-        type: Sequelize.STRING,
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
-      custo_descarte: {
-        type: Sequelize.STRING,
+      custo_de_descarte: {
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
       economia_anual: {
-        type: Sequelize.STRING,
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
-      econimia_perc: {
-        type: Sequelize.STRING,
+      economia_perc: {
+        type: Sequelize.NUMBER,
+        allowNull: false,
+      },
+      capacidade_oleo: {
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
       consumo_atual: {
-        type: Sequelize.STRING,
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
-      consumo_filtro: {
-        type: Sequelize.STRING,
+      consumo_com_filtro: {
+        type: Sequelize.NUMBER,
         allowNull: false,
       },
-      econimia_litros: {
-        type: Sequelize.STRING,
+      economia_em_litros: {
+        type: Sequelize.NUMBER,
         allowNull: false,
-      },
+      }, 
       checkin: {
         type: Sequelize.BOOLEAN,
-        allowNull: false,
-      },
+        defaultValue: false,
+      },     
       created_at: { 
         type: Sequelize.DATE,
         allowNull: false

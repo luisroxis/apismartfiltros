@@ -1,23 +1,15 @@
 import jwt from 'jsonwebtoken'
 import authConfig from '../../config/auth'
-import * as Yup from 'yup'
 
 import User from '../models/User'
 
 
 class SessionController {
   async store(req, res) {
-    const schema = Yup.object().shape({      
-      email: Yup.string().email().required(),
-      password: Yup.string().required()
-    })
+    
+    const { username, password } = req.body
 
-    if(!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Falha na Validação dos Dados'})
-    }
-    const { email, password } = req.body
-
-    const user = await User.findOne({ where: { email }})
+    const user = await User.findOne({ where: { username }})
 
     if(!user) {
       return res.status(400).json({ error: 'Usuario não encontrado'})
@@ -33,7 +25,6 @@ class SessionController {
       user: {
         id,
         name,
-        email,
       },
       token: jwt.sign({ id },authConfig.secret,{
         expiresIn: authConfig.expiresIn, 
