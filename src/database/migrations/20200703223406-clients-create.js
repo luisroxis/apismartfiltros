@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      email: {
+      telefone: {
         type: Sequelize.STRING,
         allowNull: false
       },
@@ -22,55 +22,59 @@ module.exports = {
         allowNull: false
       },
       qtde_equipamento: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       capacidade_oleo: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_litro: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_filtro: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
+      tipo_troca:{
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       intervalo_de_trocas: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       utilizacao_anual: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_operacional: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_de_descarte: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       economia_anual: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       economia_perc: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       consumo_atual: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       consumo_com_filtro: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       economia_em_litros: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       checkin: {

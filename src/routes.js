@@ -7,6 +7,7 @@ import authMiddleware from './app/middleware/auth'
 
 const routes = new Router()
 
+
 routes.get('/', (req, res) => {
   return res.json({ message: 'Bem vindo a SmartFiltros' })
 })
