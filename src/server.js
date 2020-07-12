@@ -1,7 +1,7 @@
-import app from './app'
-import https from 'https'
-import http from 'http'
-import fs from 'fs'
+const app = require('./app')
+const https = require('https')
+const http = require('http')
+const fs = require('fs')
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer({

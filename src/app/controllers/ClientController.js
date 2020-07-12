@@ -1,4 +1,4 @@
-import Client from '../models/Client'
+const  Client = require('../models/Client')
 
 class ClientController {
   async index(req, res) {
@@ -71,5 +71,4 @@ class ClientController {
   }
   }
 }
-
-export default new ClientController()
+module.exports =  new ClientController()
