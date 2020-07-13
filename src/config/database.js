@@ -1,9 +1,9 @@
 module.exports = {
   dialect: 'mysql',
-  host: 'mysql07-farm76.kinghost.net',
+  host: '127.0.0.1',
   port: '3306',
-  username: 'smartfiltros',
-  password: 'Tumas1967',
+  username: 'root',
+  password: '',
   database: 'smartfiltros',
   //storage: './src/database/db/smartlub.db',
   define: {
