@@ -4,7 +4,7 @@ class Client extends Model {
   static init (sequelize) {
     super.init({
       name: Sequelize.STRING,
-      cpf: Sequelize.STRING,
+      email: Sequelize.STRING,
       telefone: Sequelize.STRING,
       qtde_equipamento: Sequelize.NUMBER,
       capacidade_oleo: Sequelize.NUMBER,

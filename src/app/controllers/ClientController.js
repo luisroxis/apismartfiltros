@@ -21,7 +21,7 @@ class ClientController {
   async store(req, res) {
     try {
       const {
-        id, name,telefone, cpf,
+        id, name,telefone, email,
         qtde_equipamento, capacidade_oleo, custo_litro,
         custo_filtro, tipo_troca, intervalo_de_trocas, utilizacao_anual,
         custo_operacional, custo_de_descarte
@@ -30,7 +30,7 @@ class ClientController {
       return res.json({
         id,
         name,
-        cpf,
+        email,
         telefone,
         qtde_equipamento,
         capacidade_oleo,
@@ -60,7 +60,7 @@ class ClientController {
       })
 
       const {
-       name,telefone, cpf,
+       name,telefone, email,
         qtde_equipamento, capacidade_oleo, custo_litro,
         custo_filtro, tipo_troca, intervalo_de_trocas, utilizacao_anual,
         custo_operacional, custo_de_descarte
