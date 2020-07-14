@@ -6,8 +6,8 @@ const fs = require('fs')
 const httpServer = http.createServer(app)
 
 const httpsServer = https.createServer({
-  key: fs.readFileSync('  /etc/letsencrypt/live/api.smartfiltros.com.br/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/api.smartfiltros.com.br/fullchain.pem'),
+  key: fs.readFileSync('./src/certs/privatekey.pem'),
+  cert: fs.readFileSync('./src/certs/csr.pem'),
 }, app)
 
 
