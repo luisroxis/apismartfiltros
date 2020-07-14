@@ -1,6 +1,6 @@
 module.exports = {
   dialect: 'mysql',
-  host: '3.80.69.205',
+  host: 'localhost',
   port: '3306',
   username: 'smartuser',
   password: 'Smart@2020!',
