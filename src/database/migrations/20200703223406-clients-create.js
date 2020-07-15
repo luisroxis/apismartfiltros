@@ -22,19 +22,19 @@ module.exports = {
         allowNull: false
       },
       qtde_equipamento: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       capacidade_oleo: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_litro: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_filtro: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       tipo_troca:{
@@ -42,39 +42,39 @@ module.exports = {
         allowNull: false
       },
       intervalo_de_trocas: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       utilizacao_anual: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_operacional: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       custo_de_descarte: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.FLOAT,
         allowNull: true
       },
       economia_anual: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.FLOAT,
         allowNull: true
       },
       economia_perc: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       consumo_atual: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.FLOAT,
         allowNull: true
       },
       consumo_com_filtro: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       economia_em_litros: {
-        type: Sequelize.DECIMAL(10,4),
+        type: Sequelize.DECIMAL,
         allowNull: true
       },
       checkin: {
