@@ -13,7 +13,7 @@
 }*/
 module.exports = {
   dialect: 'mysql',
-  host: '3.84.184.193',
+  host: 'localhost',
   port: '3306',
   username: 'smart2',
   password: 'Smart@2020!',
