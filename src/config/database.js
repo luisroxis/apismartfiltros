@@ -15,7 +15,7 @@ module.exports = {
   dialect: 'mysql',
   host: 'localhost',
   port: '3306',
-  username: 'smartuser',
+  username: 'smart2',
   password: 'Smart@2020!',
   database: 'smartfiltros',
   define: {
