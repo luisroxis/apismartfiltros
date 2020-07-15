@@ -17,7 +17,7 @@ module.exports = {
   port: '3306',
   username: 'smart2',
   password: 'Smart@2020!',
-  database: 'smartfiltros',
+  database: 'smartFiltros',
   define: {
     timestamps: true,
     underscored: true,
