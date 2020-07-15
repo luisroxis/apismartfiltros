@@ -19,6 +19,7 @@ routes.post('/clients', ClientController.store)
 routes.use(authMiddleware)
 routes.put('/users', UserController.update)
 routes.get('/clients', ClientController.index)
+routes.post('/clientsQuery', ClientController.query)
 routes.put('/clients/:id', ClientController.update)
 
 module.exports =  routes
