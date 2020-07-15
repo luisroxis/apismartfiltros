@@ -96,19 +96,55 @@ class ClientController {
     }
   }
 
-  async update(req, res, params) {
-    const client = await Client.findByPk(params.id)
+    async update(req, res) {
+      try{
 
-    return res.json(client)
+      const id = req.params.id 
 
-  } catch(error) {
-    console.log(error)
-    return res.status(500).json({
-      status: 'ERROR',
-      message: 'Erro:  ' + error
-    })
-    /*return res.json({ msg: error });*/
+      const client = await Client.findOne({
+        where: {id}
+      })
+
+      const { 
+        name,
+        checkin, 
+        qtde_equipamento,
+        capacidade_oleo,
+        custo_litro,
+        custo_filtro,
+        tipo_troca,
+        intervalo_de_trocas,
+        utilizacao_anual,
+        custo_operacional,
+        custo_de_descarte } = req.body
+
+      
+      const up = client.update(req.body)
+        
+      return res.json({
+        id,
+        name,
+        checkin, 
+        qtde_equipamento,
+        capacidade_oleo,
+        custo_litro,
+        custo_filtro,
+        tipo_troca,
+        intervalo_de_trocas,
+        utilizacao_anual,
+        custo_operacional,
+        custo_de_descarte
+      })
+
+    } catch(error) {
+      console.log(error)
+      return res.status(500).json({
+        status: 'ERROR',
+        message: 'Erro:  ' + error
+      })
+      /*return res.json({ msg: error });*/
+    }
   }
-
 }
+
 module.exports =  new ClientController()

@@ -10,7 +10,8 @@
     underscored: true,
     underscoredAll: true
   },
-}*/
+}
+*/
 module.exports = {
   dialect: 'mysql',
   host: 'localhost',
