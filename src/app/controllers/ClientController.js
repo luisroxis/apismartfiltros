@@ -1,4 +1,6 @@
 const  Client = require('../models/Client')
+const {Op} = require('sequelize')
+
 
 class ClientController {
   async index(req, res) {
@@ -18,7 +20,7 @@ class ClientController {
       console.log(error)
       return res.status(500).json({
         status: 'ERROR',
-        message: 'Erro:  ' + error
+        message: 'Erro na API:  ' 
       })
       /*return res.json({ msg: error });*/
     }
@@ -32,9 +34,12 @@ class ClientController {
       } = req.body
       console.log('query ', begin, end);
       let beginDate = new Date(begin)
-    //  beginDate.setHours(0, 0, 0, 1);
-      let endDate = new Date(end)+1;
-      endDate.setHours(23, 59, 59);
+      beginDate.setHours(0);
+      //  beginDate.setHours(0, 0, 0, 1);
+      let endDate = new Date(end);
+     // endDate.setHours(23, 59, 59);
+      endDate.setHours(23);
+  
 
       const client = await Client.findAll({
         where: {
@@ -88,36 +93,22 @@ class ClientController {
         status: 'ERROR',
         message: 'Erro:  ' + error
       })
-      /*return res.json({ msg: error });*/
     }
   }
 
-  async update (req, res) {
-    try {      
+  async update(req, res, params) {
+    const client = await Client.findByPk(params.id)
 
-      const client = await Client.findOne({
-        where: Client.id === req.params.id
-      })
+    return res.json(client)
 
-      const {
-       name,telefone, email,
-        qtde_equipamento, capacidade_oleo, custo_litro,
-        custo_filtro, tipo_troca, intervalo_de_trocas, utilizacao_anual,
-        custo_operacional, custo_de_descarte
-      } =   await Client.update(req.body)
-      
-      
-      return res.json(client)
-
-
-    } catch (error) {
-      console.log(error)
-      return res.status(500).json({
-        status: 'ERROR',
-        message: 'Erro:  ' + error
-      })
-      
-    }
+  } catch(error) {
+    console.log(error)
+    return res.status(500).json({
+      status: 'ERROR',
+      message: 'Erro:  ' + error
+    })
+    /*return res.json({ msg: error });*/
   }
+
 }
 module.exports =  new ClientController()
