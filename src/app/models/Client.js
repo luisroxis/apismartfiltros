@@ -16,11 +16,11 @@ class Client extends Model {
       custo_operacional: Sequelize.NUMBER,
       custo_de_descarte: Sequelize.NUMBER,
       economia_anual: Sequelize.NUMBER,
-      checkin: Sequelize.BOOLEAN,
-      economina_per: Sequelize.NUMBER,
+      checkin: Sequelize.BOOLEAN,/*
+      economina_perc: Sequelize.NUMBER,
       consumo_atual: Sequelize.NUMBER,
       consumo_com_filtro: Sequelize.NUMBER,
-      economia_em_litros: Sequelize.NUMBER
+      economia_em_litros: Sequelize.NUMBER*/
     },
     {
       sequelize

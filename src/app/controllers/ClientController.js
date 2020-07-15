@@ -69,9 +69,11 @@ class ClientController {
         id, name, email, telefone,
         qtde_equipamento, capacidade_oleo, custo_litro,
         custo_filtro, tipo_troca, intervalo_de_trocas, utilizacao_anual,
-        custo_operacional, custo_de_descarte,economia_anual, economia_perc, consumo_atual,
-        consumo_com_filtro, economia_em_litros
+        custo_operacional, custo_de_descarte,economia_anual, /*economia_perc, consumo_atual,
+        consumo_com_filtro, economia_em_litros*/
       } = await Client.create(req.body)
+
+      console.log(economia_anual)
 
       return res.json({
         id,
@@ -88,10 +90,12 @@ class ClientController {
         custo_operacional,
         custo_de_descarte,
         economia_anual,
+        /*
         economia_perc,
         consumo_atual,
         consumo_com_filtro,
         economia_em_litros
+        */
       })
     } catch (error) {
       console.log(error)
@@ -124,10 +128,12 @@ class ClientController {
         custo_operacional,
         custo_de_descarte,
         economia_anual,
+        /*
         economia_perc,
         consumo_atual,
         consumo_com_filtro,
-        economia_em_litros} = req.body
+        economia_em_litros
+      */} = req.body
 
       
       const up = client.update(req.body)
@@ -146,10 +152,11 @@ class ClientController {
         custo_operacional,
         custo_de_descarte,
         economia_anual,
+        /*
         economia_perc,
         consumo_atual,
         consumo_com_filtro,
-        economia_em_litros
+        economia_em_litros*/
       })
 
     } catch(error) {
