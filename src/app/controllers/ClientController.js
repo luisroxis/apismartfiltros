@@ -20,7 +20,7 @@ class ClientController {
       console.log(error)
       return res.status(500).json({
         status: 'ERROR',
-        message: 'Erro na API:  ' 
+        message: `Erro na API: + ${error}`
       })
       /*return res.json({ msg: error });*/
     }
