@@ -13,11 +13,11 @@
 }*/
 module.exports = {
   dialect: 'mysql',
-  host: 'localhost',
+  host: '3.84.184.193',
   port: '3306',
   username: 'smart2',
   password: 'Smart@2020!',
-  database: 'smartFiltros',
+  database: 'smartfiltros',
   define: {
     timestamps: true,
     underscored: true,
