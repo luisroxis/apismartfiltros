@@ -1,4 +1,4 @@
-/*module.exports = {
+module.exports = {
   dialect: 'mysql',
   host: 'localhost',
   port: '3306',
@@ -11,7 +11,7 @@
     underscoredAll: true
   },
 }
-*/
+/*
 module.exports = {
   dialect: 'mysql',
   host: 'localhost',
@@ -25,3 +25,4 @@ module.exports = {
     underscoredAll: true
   },
 }
+*/
