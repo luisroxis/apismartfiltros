@@ -18,7 +18,7 @@ module.exports = {
   dialectOptions: {
     timezone: 'Etc/GMT-3',
   },
-  host: '3.84.184.193',
+  host: 'localhost',
   port: '3306',
   username: 'rlpc',
   password: 'Smart@2020!',
