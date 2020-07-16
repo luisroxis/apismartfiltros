@@ -3,7 +3,7 @@ const https = require('https')
 const http = require('http')
 const fs = require('fs')
 
-/*const httpServer = http.createServer(app)*/
+const httpServer = http.createServer(app)
 
 const httpsServer = https.createServer({
   key: fs.readFileSync('./src/certs/privkey.pem'),
@@ -11,9 +11,9 @@ const httpsServer = https.createServer({
 }, app)
 
 
-/*httpServer.listen(9000, () => {    
+httpServer.listen(9000, () => {    
 })
-*/
+
 
 httpsServer.listen(9002, () => {    
 })
