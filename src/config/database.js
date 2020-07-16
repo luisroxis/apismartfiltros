@@ -15,7 +15,10 @@ module.exports = {
 
 module.exports = {
   dialect: 'mariadb',
-  host: '3.84.184.193',
+  dialectOptions: {
+    timezone: 'Etc/GMT-3',
+  },
+  host: 'localhost',
   port: '3306',
   username: 'smart2',
   password: 'Smart@2020!',
