@@ -1,24 +1,9 @@
-/* Local conecction
-module.exports = {
-  dialect: 'mysql',
-  host: 'localhost',
-  port: '3306',
-  username: 'root',
-  password: '',
-  database: 'smartfiltros',
-  define: {
-    timestamps: true,
-    underscored: true,
-    underscoredAll: true
-  },
-}*/
-
 module.exports = {
   dialect: 'mariadb',
   dialectOptions: {
     timezone: 'Etc/GMT-3',
   },
-  host: '3.84.184.193',
+  host: 'localhost',
   port: '3306',
   username: 'rlpc',
   password: 'Smart@2020!',
