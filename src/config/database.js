@@ -16,8 +16,8 @@ module.exports = {
 module.exports = {
   dialect: 'mariadb',
   host: 'localhost',
-  port: '3307',
-  username: 'smartuser',
+  port: '3306',
+  username: 'smart2',
   password: 'Smart@2020!',
   database: 'smartFiltros',
   define: {
