@@ -14,12 +14,12 @@ module.exports = {
 }*/
 
 module.exports = {
-  dialect: 'mysql',
+  dialect: 'mariadb',
   host: 'localhost',
-  port: '3306',
+  port: '3307',
   username: 'smartuser',
   password: 'Smart@2020!',
-  database: 'smartfiltros',
+  database: 'smartFiltros',
   define: {
     timestamps: true,
     underscored: true,
