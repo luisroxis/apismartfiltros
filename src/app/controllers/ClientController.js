@@ -1,5 +1,5 @@
-const  Client = require('../models/Client')
-const {Op} = require('sequelize')
+import  Client from '../models/Client'
+import  { Op } from 'sequelize'
 
 
 class ClientController {
@@ -170,4 +170,4 @@ class ClientController {
   }
 }
 
-module.exports =  new ClientController()
+export default new ClientController()

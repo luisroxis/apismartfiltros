@@ -6,3 +6,6 @@ node_modules
 
 #Variaveis de Ambiente
 .env
+
+#dist
+dist

@@ -1,9 +1,9 @@
-const { Router } = require ('express')
-const UserController = require ('./app/controllers/UserController')
-const SessionController = require ('./app/controllers/SessionController')
-const ClientController = require ('./app/controllers/ClientController')
+import  { Router } from  'express'
+import  UserController from './app/controllers/UserController'
+import  SessionController from './app/controllers/SessionController'
+import  ClientController from './app/controllers/ClientController'
 
-const authMiddleware = require ('./app/middleware/auth')
+import  authMiddleware from  './app/middleware/auth'
 
 const routes = new Router()
 
@@ -22,4 +22,4 @@ routes.get('/clients', ClientController.index)
 routes.post('/clientsQuery', ClientController.query)
 routes.put('/clients/:id', ClientController.update)
 
-module.exports =  routes
+export default routes

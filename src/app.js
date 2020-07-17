@@ -1,18 +1,18 @@
-require('dotenv/config')
+import('dotenv/config')
 
-const express = require ('express')
-const Sentry = require('@sentry/node')
-const Youch = require('youch')
+import  express from 'express'
+import  * as Sentry from '@sentry/node'
+import  Youch from 'youch'
 
-require('express-async-errors')
+import 'express-async-errors'
 
-const routes = require ('./routes')
-const cors =  require ('cors')
-const sentryConfig = require('./config/sentry')
+import  routes from './routes'
+import  cors from 'cors'
+import  sentryConfig from './config/sentry'
 
 
 
-require ('./database')
+import './database'
 
 class App{
   constructor() {
@@ -50,4 +50,4 @@ class App{
 
 }
 
-module.exports =  new App().server
+export default new App().server

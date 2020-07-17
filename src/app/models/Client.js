@@ -1,4 +1,4 @@
-const {Sequelize,  Model } = require('sequelize')
+import  {Sequelize,  Model } from 'sequelize'
 
 class Client extends Model {
   static init (sequelize) {
@@ -30,4 +30,4 @@ class Client extends Model {
   }
 }
 
-module.exports =  Client
+export default Client

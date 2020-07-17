@@ -1,4 +1,4 @@
-const User = require('../models/User')
+import User from '../models/User'
 
 class UserController {
   async store(req, res) {
@@ -43,12 +43,13 @@ class UserController {
         return res.status(401).json({ error: 'Password não confere' })
       }
 
-      const { id, name } = await user.update(req.body)
+      const { id, name , password } = await user.update(req.body)
 
       return res.json({
         id,
         name,
-        username
+        username,
+        password
       })
     }
     catch (error) {
@@ -62,4 +63,4 @@ class UserController {
   }
 }
 
-module.exports = new UserController()
+export default new UserController()
