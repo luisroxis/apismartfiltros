@@ -9,3 +9,11 @@ node_modules
 
 #dist
 dist
+
+#files
+*.pdf
+*.png
+*.svg
+*.jpg
+*.jpeg
+*.gif
