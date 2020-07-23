@@ -1,16 +1,13 @@
 import('dotenv/config')
 
 import  express from 'express'
-import  * as Sentry from '@sentry/node'
-import  Youch from 'youch'
-
 import 'express-async-errors'
-
-import  routes from './routes'
-import  cors from 'cors'
+import path from 'path'
+import  * as Sentry from '@sentry/node'
 import  sentryConfig from './config/sentry'
-
-
+import  routes from './routes'
+import  Youch from 'youch'
+import  cors from 'cors'
 
 import './database'
 
@@ -20,7 +17,6 @@ class App{
 
     Sentry.init(sentryConfig)
 
-
     
     this.midllewares()
     this.routes()
@@ -29,6 +25,10 @@ class App{
   midllewares() { 
     this.server.use(Sentry.Handlers.requestHandler())
     this.server.use(express.json())
+    this.server.use(
+      '/files',
+      express.static(path.resolve(__dirname, '..','public', 'uploads'))   
+    )
     this.server.use(cors())
   }
   routes() {

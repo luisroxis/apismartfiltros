@@ -6,6 +6,7 @@ import BruteRedis from 'express-brute-redis'
 import  UserController from './app/controllers/UserController'
 import  SessionController from './app/controllers/SessionController'
 import  ClientController from './app/controllers/ClientController'
+import FileController from './app/controllers/FileController'
 
 import  authMiddleware from  './app/middleware/auth'
 
@@ -25,14 +26,13 @@ routes.get('/', (req, res) => {
 routes.post('/users', UserController.store)
 routes.post('/sessions',bruteForce.prevent, SessionController.store)
 routes.post('/clients', ClientController.store)
+routes.post('/files', upload.single('file'), FileController.store)
 
 routes.use(authMiddleware)
 routes.put('/users', UserController.update)
 routes.get('/clients', ClientController.index)
 routes.post('/clientsQuery', ClientController.query)
 routes.put('/clients/:id', ClientController.update)
-routes.post('/files', upload.single('file') ,(req, res) =>{
-  return res.json({ ok: true })
-})
+
 
 export default routes
