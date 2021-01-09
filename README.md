@@ -3,9 +3,9 @@
 
 ## Tecnologias
 
-heavy_check_mark NodeJS
+:heavy_check_mark: NodeJS
 
-heavy_check_mark MariaDB
+:heavy_check_mark: MariaDB
 
 ### Apresentação
 
