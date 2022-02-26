@@ -1,11 +1,11 @@
-import  { Router } from  'express'
+import { Router } from 'express'
 import Brute from 'express-brute'
 import BruteRedis from 'express-brute-redis'
-import  UserController from './app/controllers/UserController'
-import  SessionController from './app/controllers/SessionController'
-import  ClientController from './app/controllers/ClientController'
+import UserController from './app/controllers/UserController'
+import SessionController from './app/controllers/SessionController'
+import ClientController from './app/controllers/ClientController'
 
-import  authMiddleware from  './app/middleware/auth'
+import authMiddleware from './app/middleware/auth'
 
 const routes = new Router()
 const bruteStore = new BruteRedis({
@@ -20,7 +20,7 @@ routes.get('/', (req, res) => {
 })
 
 routes.post('/users', UserController.store)
-routes.post('/sessions',bruteForce.prevent, SessionController.store)
+routes.post('/sessions', bruteForce.prevent, SessionController.store)
 routes.post('/clients', ClientController.store)
 
 routes.use(authMiddleware)

@@ -9,3 +9,8 @@ node_modules
 
 #dist
 dist
+src/certs
+
+#files
+package-lock.json
+yarn.lock
