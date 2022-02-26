@@ -23,8 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "mariadb": "^2.4.1",
     "redis": "^3.0.2",
-    "sequelize": "^6.2.4",
-    "youch": "^2.1.1"
+    "sequelize": "^6.3.5",
+    "youch": "^2.0.10"
   },
   "devDependencies": {
     "eslint": "^7.4.0",
