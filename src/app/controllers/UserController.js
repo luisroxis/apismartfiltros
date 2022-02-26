@@ -1,7 +1,7 @@
 import User from '../models/User'
 
 class UserController {
-  async store(req, res) {
+  async store (req, res) {
     try {
       const userExists = await User.findOne({ where: { username: req.body.username } })
       if (userExists) {
@@ -21,11 +21,11 @@ class UserController {
         status: 'ERROR',
         message: `Erro na API: + ${error}`
       })
-      /*return res.json({ msg: error });*/
+      /* return res.json({ msg: error }); */
     }
   }
 
-  async update(req, res) {
+  async update (req, res) {
     try {
       const { username, oldPassword } = req.body
 
@@ -43,7 +43,7 @@ class UserController {
         return res.status(401).json({ error: 'Password não confere' })
       }
 
-      const { id, name , password } = await user.update(req.body)
+      const { id, name, password } = await user.update(req.body)
 
       return res.json({
         id,
@@ -51,15 +51,14 @@ class UserController {
         username,
         password
       })
-    }
-    catch (error) {
+    } catch (error) {
       console.log(error)
       return res.status(500).json({
         status: 'ERROR',
         message: `Erro na API: + ${error}`
       })
     }
-    /*return res.json({ msg: error });*/
+    /* return res.json({ msg: error }); */
   }
 }
 

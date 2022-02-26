@@ -3,9 +3,8 @@ import authConfig from '../../config/auth'
 
 import User from '../models/User'
 
-
 class SessionController {
-  async store(req, res) {
+  async store (req, res) {
     try {
       console.log('password')
       const { username, password } = req.body
@@ -25,10 +24,10 @@ class SessionController {
       return res.json({
         user: {
           id,
-          name,
+          name
         },
         token: jwt.sign({ id }, authConfig.secret, {
-          expiresIn: authConfig.expiresIn,
+          expiresIn: authConfig.expiresIn
         })
       })
     } catch (error) {
@@ -37,9 +36,8 @@ class SessionController {
         status: 'ERROR',
         message: 'Erro:  ' + error
       })
-      /*return res.json({ msg: error });*/
+      /* return res.json({ msg: error }); */
     }
-
   }
 }
 

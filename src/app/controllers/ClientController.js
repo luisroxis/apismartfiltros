@@ -1,11 +1,11 @@
-import  Client from '../models/Client'
-import  { Op } from 'sequelize'
-
+/* eslint-disable camelcase */
+import Client from '../models/Client'
+import { Op } from 'sequelize'
 
 class ClientController {
-  async index(req, res) {
-    var date = new Date();
-    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+  async index (req, res) {
+    var date = new Date()
+    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1)
     try {
       const client = await Client.findAll({
         where: {
@@ -22,30 +22,28 @@ class ClientController {
         status: 'ERROR',
         message: `Erro na API: + ${error}`
       })
-      /*return res.json({ msg: error });*/
+      /* return res.json({ msg: error }); */
     }
   }
 
-  async query(req, res) {
-
+  async query (req, res) {
     try {
       const {
         begin, end
       } = req.body
-      console.log('query ', begin, end);
-      let beginDate = new Date(begin)
-      beginDate.setHours(0);
+      console.log('query ', begin, end)
+      const beginDate = new Date(begin)
+      beginDate.setHours(0)
       //  beginDate.setHours(0, 0, 0, 1);
-      let endDate = new Date(end);
-     // endDate.setHours(23, 59, 59);
-      endDate.setHours(23);
-  
+      const endDate = new Date(end)
+      // endDate.setHours(23, 59, 59);
+      endDate.setHours(23)
 
       const client = await Client.findAll({
         where: {
           created_at: {
             [Op.gte]: beginDate,
-            [Op.lte]: endDate,
+            [Op.lte]: endDate
 
           }
         }
@@ -59,18 +57,16 @@ class ClientController {
         message: 'Erro:  ' + error
       })
     }
-
-
-
   }
-  async store(req, res) {
+
+  async store (req, res) {
     try {
       const {
         id, name, email, telefone,
         qtde_equipamento, capacidade_oleo, custo_litro,
         custo_filtro, tipo_troca, intervalo_de_trocas, utilizacao_anual,
-        custo_operacional, custo_de_descarte,economia_anual, /*economia_perc, consumo_atual,
-        consumo_com_filtro, economia_em_litros*/
+        custo_operacional, custo_de_descarte, economia_anual /* economia_perc, consumo_atual,
+        consumo_com_filtro, economia_em_litros */
       } = await Client.create(req.body)
 
       console.log(economia_anual)
@@ -89,7 +85,7 @@ class ClientController {
         utilizacao_anual,
         custo_operacional,
         custo_de_descarte,
-        economia_anual,
+        economia_anual
         /*
         economia_perc,
         consumo_atual,
@@ -106,18 +102,17 @@ class ClientController {
     }
   }
 
-    async update(req, res) {
-      try{
-
-      const id = req.params.id 
+  async update (req, res) {
+    try {
+      const id = req.params.id
 
       const client = await Client.findOne({
-        where: {id}
+        where: { id }
       })
 
-      const { 
+      const {
         name,
-        checkin, 
+        checkin,
         qtde_equipamento,
         capacidade_oleo,
         custo_litro,
@@ -127,21 +122,20 @@ class ClientController {
         utilizacao_anual,
         custo_operacional,
         custo_de_descarte,
-        economia_anual,
+        economia_anual
         /*
         economia_perc,
         consumo_atual,
         consumo_com_filtro,
         economia_em_litros
-      */} = req.body
+      */ } = req.body
 
-      
       const up = client.update(req.body)
-        
+
       return res.json({
         id,
         name,
-        checkin, 
+        checkin,
         qtde_equipamento,
         capacidade_oleo,
         custo_litro,
@@ -151,21 +145,20 @@ class ClientController {
         utilizacao_anual,
         custo_operacional,
         custo_de_descarte,
-        economia_anual,
+        economia_anual
         /*
         economia_perc,
         consumo_atual,
         consumo_com_filtro,
-        economia_em_litros*/
+        economia_em_litros */
       })
-
-    } catch(error) {
+    } catch (error) {
       console.log(error)
       return res.status(500).json({
         status: 'ERROR',
         message: 'Erro:  ' + error
       })
-      /*return res.json({ msg: error });*/
+      /* return res.json({ msg: error }); */
     }
   }
 }
