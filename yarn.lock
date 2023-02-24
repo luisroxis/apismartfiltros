@@ -127,6 +127,12 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@types/debug@^4.1.7":
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
+  dependencies:
+    "@types/ms" "*"
+
 "@types/geojson@^7946.0.7":
   version "7946.0.8"
   resolved "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.8.tgz"
@@ -135,6 +141,10 @@
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
 
+"@types/ms@*":
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
+
 "@types/node@*":
   version "14.14.20"
   resolved "https://registry.npmjs.org/@types/node/-/node-14.14.20.tgz"
@@ -142,6 +152,10 @@
 "@types/node@^14.14.28":
   version "14.18.12"
   resolved "https://registry.npmjs.org/@types/node/-/node-14.18.12.tgz"
+
+"@types/validator@^13.7.1":
+  version "13.7.12"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.7.12.tgz#a285379b432cc8d103b69d223cbb159a253cf2f7"
 
 abbrev@1:
   version "1.1.1"
@@ -212,7 +226,7 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-any-promise@^1.0.0, any-promise@^1.3.0:
+any-promise@^1.0.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/any-promise/-/any-promise-1.3.0.tgz"
 
@@ -541,9 +555,9 @@ debug@2.6.9, debug@^2.2.0, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4:
-  version "4.3.1"
-  resolved "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
+debug@4, debug@^4.0.1, debug@^4.1.1, debug@^4.3.3:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   dependencies:
     ms "2.1.2"
 
@@ -552,18 +566,6 @@ debug@^3.2.6:
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.6.tgz"
   dependencies:
     ms "^2.1.1"
-
-debug@^4.0.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz"
-  dependencies:
-    ms "^2.1.1"
-
-debug@^4.1.1:
-  version "4.3.3"
-  resolved "https://registry.npmjs.org/debug/-/debug-4.3.3.tgz"
-  dependencies:
-    ms "2.1.2"
 
 decompress-response@^3.3.0:
   version "3.3.0"
@@ -632,9 +634,9 @@ dotenv@^8.2.0:
   version "8.6.0"
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-8.6.0.tgz"
 
-dottie@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/dottie/-/dottie-2.0.2.tgz"
+dottie@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/dottie/-/dottie-2.0.3.tgz#797a4f4c92a9a65499806be4051b9d9dcd5a5d77"
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -1302,9 +1304,9 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
 
-inflection@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/inflection/-/inflection-1.12.0.tgz#a200935656d6f5f6bc4dc7502e1aecb703228416"
+inflection@^1.13.2:
+  version "1.13.4"
+  resolved "https://registry.yarnpkg.com/inflection/-/inflection-1.13.4.tgz#65aa696c4e2da6225b148d7a154c449366633a32"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -1589,7 +1591,7 @@ lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.npmjs.org/lodash.truncate/-/lodash.truncate-4.4.2.tgz"
 
-lodash@^4.17.15, lodash@^4.17.21:
+lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
 
@@ -1710,13 +1712,13 @@ minimist@^1.2.0:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
 
-moment-timezone@^0.5.31, moment-timezone@^0.5.33:
-  version "0.5.33"
-  resolved "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.33.tgz"
+moment-timezone@^0.5.33, moment-timezone@^0.5.35:
+  version "0.5.40"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.40.tgz#c148f5149fd91dd3e29bf481abc8830ecba16b89"
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.26.0:
+"moment@>= 2.9.0", moment@^2.29.1:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
@@ -1936,6 +1938,10 @@ path-type@^2.0.0:
   dependencies:
     pify "^2.0.0"
 
+pg-connection-string@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/pg-connection-string/-/pg-connection-string-2.5.0.tgz#538cadd0f7e603fc09a12590f3b8a452c2c0cf34"
+
 picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.2.2.tgz"
@@ -2130,11 +2136,9 @@ responselike@^1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-retry-as-promised@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-3.2.0.tgz"
-  dependencies:
-    any-promise "^1.3.0"
+retry-as-promised@^7.0.3:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/retry-as-promised/-/retry-as-promised-7.0.4.tgz#9df73adaeea08cb2948b9d34990549dc13d800a2"
 
 retry@0.6.0:
   version "0.6.0"
@@ -2172,13 +2176,9 @@ semver@^6.0.0, semver@^6.1.0, semver@^6.2.0, semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
 
-semver@^7.2.1:
-  version "7.3.2"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz"
-
-semver@^7.3.2:
-  version "7.3.4"
-  resolved "https://registry.npmjs.org/semver/-/semver-7.3.4.tgz"
+semver@^7.2.1, semver@^7.3.5:
+  version "7.3.8"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.8.tgz#07a78feafb3f7b32347d725e33de7e2a2df67798"
   dependencies:
     lru-cache "^6.0.0"
 
@@ -2212,26 +2212,29 @@ sequelize-cli@^6.1.0:
     umzug "^2.3.0"
     yargs "^16.2.0"
 
-sequelize-pool@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.npmjs.org/sequelize-pool/-/sequelize-pool-6.1.0.tgz"
+sequelize-pool@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/sequelize-pool/-/sequelize-pool-7.1.0.tgz#210b391af4002762f823188fd6ecfc7413020768"
 
-sequelize@^6.2.4:
-  version "6.3.5"
-  resolved "https://registry.npmjs.org/sequelize/-/sequelize-6.3.5.tgz"
+sequelize@^6.29.0:
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.29.0.tgz#7b8750487adb7502ce8a7005b460d50c8ccc58b7"
   dependencies:
-    debug "^4.1.1"
-    dottie "^2.0.0"
-    inflection "1.12.0"
-    lodash "^4.17.15"
-    moment "^2.26.0"
-    moment-timezone "^0.5.31"
-    retry-as-promised "^3.2.0"
-    semver "^7.3.2"
-    sequelize-pool "^6.0.0"
+    "@types/debug" "^4.1.7"
+    "@types/validator" "^13.7.1"
+    debug "^4.3.3"
+    dottie "^2.0.2"
+    inflection "^1.13.2"
+    lodash "^4.17.21"
+    moment "^2.29.1"
+    moment-timezone "^0.5.35"
+    pg-connection-string "^2.5.0"
+    retry-as-promised "^7.0.3"
+    semver "^7.3.5"
+    sequelize-pool "^7.1.0"
     toposort-class "^1.0.1"
-    uuid "^8.1.0"
-    validator "^10.11.0"
+    uuid "^8.3.2"
+    validator "^13.7.0"
     wkx "^0.5.0"
 
 serve-static@1.14.1:
@@ -2567,9 +2570,9 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz"
 
-uuid@^8.1.0:
+uuid@^8.3.2:
   version "8.3.2"
-  resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
 
 v8-compile-cache@^2.0.3:
   version "2.1.1"
@@ -2582,9 +2585,9 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-validator@^10.11.0:
-  version "10.11.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-10.11.0.tgz#003108ea6e9a9874d31ccc9e5006856ccd76b228"
+validator@^13.7.0:
+  version "13.9.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.9.0.tgz#33e7b85b604f3bbce9bb1a05d5c3e22e1c2ff855"
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
